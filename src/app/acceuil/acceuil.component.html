@@ -1,0 +1,25 @@
+<div class="truc-a-centrer">
+<h1>URL Shrinker</h1>
+<form #formulaire="ngForm" action="" method="POST">
+  <input ngModel type="url" name="full" id="full" placeholder="Full URL" ><br>
+  <button class="form__submit" type="submit" (click)="addUtilisateur(formulaire)">Shrink</button>
+</form></div><br><br><br>
+<div class="truc-b-centrer">
+<div class="datatable datatable--properties">
+  <div class="datatable__wrap" >
+<table class="js-properties-table datatable__table">
+  <thead>
+  <th class="datatable__head-1">Full URL</th>
+  <th class="datatable__head-2">Short URL</th>
+  <th class="datatable__head-3">Clicks</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let boutiques of urls">
+    <td class="datatable__cell-2"><a href="{{boutiques.full}}" (click)="update(boutiques.id)">
+      {{boutiques.full}}</a></td>
+    <td class="datatable__cell-2"><a href="{{boutiques.full}}" (click)="update(boutiques.id)">{{boutiques.short}}</a></td>
+    <td class="datatable__cell-3">{{boutiques.clicks}}</td>
+  </tr>
+  </tbody>
+</table>
+  </div></div></div>

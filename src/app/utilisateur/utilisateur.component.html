@@ -1,0 +1,113 @@
+<div class="site-wrap js-site-wrap">
+
+  <!-- BEGIN BREADCRUMBS-->
+  <nav class="breadcrumbs">
+
+    <div class="container">
+
+    </div>
+  </nav>
+
+  <div class="center">
+    <div class="container">
+
+      <div class="row">
+        <section class="site">
+          <header class="site__header">
+
+            <br>
+
+            <section class="feature">
+              <div class="bg-brickwall">
+
+                <div class="container">
+
+                  <div class="feature__content">
+                    <div class="site__main">
+                      <div class="widget js-widget widget--main widget--no-border">
+                        <div class="widget__content">
+
+                          <div class="auth__wrap auth__wrap--login">
+                            <div class="alert alert-success" role="alert" *ngIf="Message">{{Message}}</div>
+                            <div class="alert alert-danger" role="alert" *ngIf="errorMessage1">{{errorMessage1}}</div>
+                            <form #formulaire="ngForm" class="form form--flex form--auth js-register-form js-parsley">
+                              <div class="row">
+
+                                <div class="form-group form-group--col-6">
+                                  <input type="text" ngModel name="nom" id="nom" placeholder="Nom" required class="form-control">
+                                </div></div><div class="row">
+                              <div class="form-group form-group--col-6">
+
+                                <input type="text" ngModel name="prenom" id="prenom" placeholder="Prénom" required class="form-control">
+                              </div>
+                            </div>
+                              <div class="row">
+                                <div class="form-group form-group--col-6">
+
+                                  <input type="email" ngModel name="mail" id="mail" placeholder="Email" required class="form-control">
+                                </div></div>
+
+                              <div class="row">
+                                <div class="form-group form-group--col-6">
+                                  <input type="password" ngModel name="password" id="password" placeholder="Mot de passe" required class="form-control">
+                                </div></div>
+
+
+                              <div class="row">
+                                <div class="form-group form-group--col-6">
+
+                                  <input type="text" ngModel name="adresse" id="adresse" placeholder="Adresse" required class="form-control">
+
+                                </div></div>
+                              <div class="row">
+                                <div class="form-group form-group--col-6">
+                                  <input type="text" ngModel name="numtel" id="numtel" placeholder="Numéro téléphonique" required class="form-control">
+                                </div>
+
+                              </div>
+
+                              <div class="row">
+                                <div class="form-group form-group--col-6">
+                                  <button  type="submit" class="form__submit" (click)="addUtilisateur(formulaire)">Ajouter utilisateur</button>
+                                </div></div>
+                              <br><br><br>
+                            </form>
+                          </div></div>
+                        <!-- end of block .auth__form-->
+                        <!-- END AUTH LOGIN-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div></section>
+          </header></section>
+      </div>
+    </div>
+
+    <!-- END BREADCRUMBS-->
+    <div class="center">
+      <div class="container">
+        <div class="row">
+          <!-- BEGIN site-->
+          <div class="site site--main">
+
+
+
+
+          </div>
+        </div>
+        <!-- END site-->
+        <!-- BEGIN SIDEBAR-->
+        <div class="sidebar">
+
+        </div>
+      </div>
+      <!-- END SIDEBAR-->
+      <div class="clearfix"></div>
+
+    </div><br><br><br><br>
+  </div></div>
+
+
+
+

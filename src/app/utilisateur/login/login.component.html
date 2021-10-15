@@ -1,0 +1,80 @@
+<div class="site-wrap js-site-wrap">
+
+  <!-- BEGIN BREADCRUMBS-->
+
+  <div class="center">
+    <div class="container">
+
+      <div class="row">
+        <section class="site">
+          <header class="site__header">
+
+            <br>
+
+            <section class="feature">
+              <div class="bg-brickwall">
+
+                <div class="container">
+                  <div class="feature__content">
+                    <div class="site__main">
+                      <div class="widget js-widget widget--main widget--no-border">
+                        <div class="widget__content">
+
+                          <div class="auth__wrap auth__wrap--login">
+                            <div class="alert alert-danger" role="alert" *ngIf="errorMessage">{{errorMessage}}</div>
+                            <!-- BEGIN AUTH LOGIN-->
+
+                            <br>
+                            <form #loginformulaire="ngForm" class="form form--flex form--auth js-login-form js-parsley">
+                              <div class="row">
+                                <div >
+
+
+                                  <input email ngModel name="mail" maxlength="60" size="60" #inputMail="ngModel" type="text"   placeholder="Email" id="mail1"  required   class="form-control">
+                                  <div class="alert alert-danger" role="alert" *ngIf="inputMail.invalid && inputMail.dirty" >
+                                    Votre  adresse  e-mail  n'est  pas  valide (Entrer une adresse de cette forme : ***@****.**)
+                                  </div>
+                                </div>
+                                <br><br>
+                                <div >
+
+
+                                  <input ngModel name="password" maxlength="60" size="60" #pwdInput="ngModel"  type="password"  id="password1" placeholder="Mot de passe" required class="form-control">
+
+                                  <div class="alert alert-danger" role="alert" *ngIf="pwdInput.invalid && pwdInput.touched" >
+                                    le mode passe doit au minimum 4 caratéres et au maximum 8 caractéres
+                                  </div>
+                                </div></div>
+
+                              <div class="form__remember">
+                                <input type="checkbox" id="remember-in-inline" class="in-checkbox">
+
+                              </div>
+                              <button type="submit" [disabled]="loginformulaire.invalid" (click)="login(loginformulaire.value)" class="form__submit" >Connexion</button>
+
+
+                              <br><br><br>
+
+                              <div class="row">
+
+                              </div>
+                            </form>
+                          </div></div>
+                        <!-- end of block .auth__form-->
+                        <!-- END AUTH LOGIN-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div></section>
+          </header></section>
+      </div>
+    </div>
+
+    <!-- END BREADCRUMBS-->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div></div>
+
+
+
+
