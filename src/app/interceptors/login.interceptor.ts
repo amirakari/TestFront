@@ -4,9 +4,17 @@ import {Observable} from 'rxjs';
 export class LoginInterceptor implements HttpInterceptor{
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const token = localStorage.getItem('token');
-    if (token) {
+    if (req.url === 'http://localhost:3000/url'){
       const keys = req.params.keys();
       const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+      const cloneReq = req.clone(
+        {headers}
+      );
+      return next.handle(cloneReq);
+    }
+    if (token) {
+      const keys = req.params.keys();
+      const headers = new HttpHeaders().set('Authorization', `${token}`);
       const cloneReq = req.clone(
         {headers}
       );
